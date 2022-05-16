@@ -24,6 +24,9 @@ resource "aws_s3_bucket" "data" {
 
 resource "aws_s3_bucket" "data_log_bucket" {
   bucket = "data-log-bucket"
+  tags = {
+    yor_trace = "47abeaeb-cb7a-4592-9c1f-5cbe34fd33b2"
+  }
 }
 
 resource "aws_s3_bucket_logging" "data" {
